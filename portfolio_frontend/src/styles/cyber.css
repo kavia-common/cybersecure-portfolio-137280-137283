@@ -5,6 +5,7 @@
   z-index: 0;
   pointer-events: none;
   background:
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px, transparent 2px) 0 0/100% 100%, /* scanlines */
     linear-gradient(90deg, var(--cyber-line) 1px, transparent 1px) 0 0/48px 48px,
     linear-gradient(0deg, var(--cyber-line) 1px, transparent 1px) 0 0/48px 48px,
     var(--gradient-accent);
@@ -15,16 +16,16 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(0,255,149,0.18), rgba(0,255,149,0.02), rgba(0,255,149,0.18));
+  background: linear-gradient(90deg, rgba(0,245,212,0.2), rgba(0,217,255,0.04), rgba(255,0,230,0.2));
   mix-blend-mode: screen;
   animation: scan 9s linear infinite;
-  opacity: 0.25;
+  opacity: 0.22;
 }
 
 .cyber-grid::after {
   animation-duration: 14s;
   animation-direction: reverse;
-  opacity: 0.18;
+  opacity: 0.16;
 }
 
 @keyframes scan {

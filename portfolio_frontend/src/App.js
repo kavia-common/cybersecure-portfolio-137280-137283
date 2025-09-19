@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import './App.css';
 import './styles/theme.css';
 import './styles/layout.css';
@@ -20,12 +20,18 @@ import Internships from './components/sections/Internships';
 import Publications from './components/sections/Publications';
 import Projects from './components/sections/Projects';
 
+import AccordionSection from './components/AccordionSection';
 import { loadResumeData } from './utils/resume';
 
 // PUBLIC_INTERFACE
 function App() {
   const [resume, setResume] = useState(null);
   const [error, setError] = useState('');
+  // track which accordion is open (one-at-a-time). Use key names for stability.
+  const [openKey, setOpenKey] = useState(null);
+  const handleToggle = useCallback((key) => (isOpen) => {
+    setOpenKey(prev => (isOpen ? key : prev === key ? null : prev));
+  }, []);
 
   useEffect(() => {
     let mounted = true;
@@ -40,6 +46,8 @@ function App() {
     return () => { mounted = false; };
   }, []);
 
+  const blurClass = openKey ? 'cards-active' : '';
+
   return (
     <div className="App" role="application">
       <CyberGrid />
@@ -51,18 +59,81 @@ function App() {
           </div>
         )}
         {resume && (
-          <div className="grid two" style={{ marginTop: 16 }}>
+          <div className={`grid two cards-wrap ${blurClass}`} style={{ marginTop: 16 }}>
             <div className="grid" style={{ gap: 20 }}>
-              <Education items={resume.education} />
-              <Participation items={resume.participation} />
-              <Certifications items={resume.certifications} />
+              <AccordionSection
+                title="Education"
+                icon={null}
+                defaultOpen={false}
+                onToggle={handleToggle('education')}
+              >
+                <Education items={resume.education} />
+              </AccordionSection>
+
+              <AccordionSection
+                title="Participation"
+                icon={null}
+                defaultOpen={false}
+                onToggle={handleToggle('participation')}
+              >
+                <Participation items={resume.participation} />
+              </AccordionSection>
+
+              <AccordionSection
+                title="Certifications"
+                icon={null}
+                defaultOpen={false}
+                onToggle={handleToggle('certifications')}
+              >
+                <Certifications items={resume.certifications} />
+              </AccordionSection>
             </div>
+
             <div className="grid" style={{ gap: 20 }}>
-              <Interests items={resume.interests} />
-              <Languages items={resume.languages} />
-              <Internships items={resume.internships} />
-              <Projects items={resume.projects} />
-              <Publications items={resume.publications} />
+              <AccordionSection
+                title="Interests"
+                icon={null}
+                defaultOpen={false}
+                onToggle={handleToggle('interests')}
+              >
+                <Interests items={resume.interests} />
+              </AccordionSection>
+
+              <AccordionSection
+                title="Languages"
+                icon={null}
+                defaultOpen={false}
+                onToggle={handleToggle('languages')}
+              >
+                <Languages items={resume.languages} />
+              </AccordionSection>
+
+              <AccordionSection
+                title="Internships"
+                icon={null}
+                defaultOpen={false}
+                onToggle={handleToggle('internships')}
+              >
+                <Internships items={resume.internships} />
+              </AccordionSection>
+
+              <AccordionSection
+                title="Projects"
+                icon={null}
+                defaultOpen={false}
+                onToggle={handleToggle('projects')}
+              >
+                <Projects items={resume.projects} />
+              </AccordionSection>
+
+              <AccordionSection
+                title="Publications"
+                icon={null}
+                defaultOpen={false}
+                onToggle={handleToggle('publications')}
+              >
+                <Publications items={resume.publications} />
+              </AccordionSection>
             </div>
           </div>
         )}
