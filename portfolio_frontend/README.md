@@ -6,12 +6,13 @@ A modern React portfolio with a cybersecurity aesthetic: animated green scanning
 - Ocean Professional theme (blue/amber accents) via CSS variables
 - Animated CyberGrid background with subtle glow and nodes
 - Reusable visual primitives: CyberCard and CyberText classes
-- Dynamic sections: Education, Participation, Certifications, Interests, Languages, Internships
+- Dynamic sections: Education, Participation, Certifications, Interests, Languages, Internships, Projects, Publications
 - Persistent theme toggle (light/dark) using localStorage
 - Accessible markup and keyboard-friendly focus rings
 - Sample resume data included (src/data/resume.example.json)
 
 ## Quick Start
+- npm install
 - npm start
 - npm test
 - npm run build
@@ -20,7 +21,7 @@ Open http://localhost:3000
 
 ## Directory Structure
 - src/styles/
-  - theme.css            Ocean Professional tokens, gradients, utilities
+  - theme.css            Ocean Professional tokens, gradients, utilities (primary=#2563EB, secondary=#F59E0B mapped into cyber palette)
   - layout.css           Header/Footer layout styles
   - components.css       CyberCard and CyberText styles
   - cyber.css            Animated cyber background
@@ -39,6 +40,8 @@ Open http://localhost:3000
     - Interests.jsx
     - Languages.jsx
     - Internships.jsx
+    - Projects.jsx
+    - Publications.jsx
 - src/hooks/
   - useTheme.js
 - src/utils/
@@ -55,11 +58,13 @@ Open http://localhost:3000
 Schema keys:
 - basic: { name, role, summary, location, email, links[] }
 - education: [{ school, degree, focus, start, end, notes[] }]
-- participation: [{ title, org, year, details }]
+- participation: [{ title, org, year, details } or { title, org, profiles: [{site, url}] }]
 - certifications: [{ name, issuer, year }]
 - interests: [string]
 - languages: [string | { name, level }]
 - internships: [{ company, role, start, end, summary }]
+- publications: [{ title, venue, date }]
+- projects: [{ name, area }]
 
 ## Theming
 - Theme is persisted in localStorage (key: ocean-theme).
@@ -73,3 +78,4 @@ Schema keys:
 ## Notes
 - No external UI frameworks used.
 - Icons are inline SVGs defined in `src/utils/icons.js`.
+- To align with "Ocean Professional" style guide, the cyber palette is tuned for blue/amber accents while preserving cyber aesthetics.
