@@ -1,64 +1,54 @@
 {
   "basic": {
-    "name": "Alex Morgan",
-    "role": "Cyber Security Analyst",
-    "summary": "Security-focused professional specializing in incident response, detection engineering, and cloud security posture. Passionate about blue teaming and adversary emulation.",
-    "location": "San Francisco, CA",
-    "email": "alex.morgan@example.com",
+    "name": "Sarfraj Ahamed S",
+    "role": "Cyber Security Enthusiast",
+    "summary": "Aspiring security professional exploring CTFs, vulnerability analysis, and blue-team practices. Passionate about continuous learning and hands-on problem solving.",
+    "location": "Tamil Nadu, India",
+    "email": "sarfraj@kavia.ai",
     "links": [
-      { "label": "Website", "url": "https://alexmorgan.dev" },
-      { "label": "GitHub", "url": "https://github.com/cyberalex" },
-      { "label": "LinkedIn", "url": "https://linkedin.com/in/cyberalex" }
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/sarfraj-s-ahamed/" },
+      { "label": "Email", "url": "mailto:sarfraj@kavia.ai" }
     ]
   },
   "education": [
     {
-      "school": "Tech University",
-      "degree": "B.S. Computer Science",
-      "focus": "Information Security",
-      "start": "2016",
-      "end": "2020",
-      "notes": ["Cybersecurity Club President", "Dean's List x6"]
+      "school": "National Engineering College",
+      "degree": "B.Tech Artificial Intelligence and Data Science",
+      "focus": "AI & Data Science with cybersecurity interests",
+      "start": "2023",
+      "end": "2027",
+      "notes": ["Currently studying (3rd year AI&DS)"]
     }
   ],
   "participation": [
     {
-      "title": "Blue Team Village Volunteer",
-      "org": "DEF CON",
-      "year": "2023",
-      "details": "Monitored SIEM dashboards, handled triage, and assisted with live defense demos."
+      "title": "CTF Participation",
+      "org": "SRM College",
+      "year": "Ongoing",
+      "details": "Participated in Capture The Flag events focusing on web exploitation and crypto."
     },
     {
-      "title": "CTF Participant",
-      "org": "HackTheBox / picoCTF",
-      "year": "2022 - Present",
-      "details": "Active in cryptography, web exploitation, and forensics challenges."
+      "title": "CTF Participation",
+      "org": "Amrita College",
+      "year": "Ongoing",
+      "details": "Hands-on exposure to reverse engineering and forensics challenges."
+    },
+    {
+      "title": "Profiles",
+      "org": "CTF Platforms",
+      "details": "Public challenge profiles",
+      "profiles": [
+        { "site": "picoCTF", "url": "" },
+        { "site": "TryHackMe", "url": "" }
+      ]
     }
   ],
-  "certifications": [
-    { "name": "CompTIA Security+", "issuer": "CompTIA", "year": "2021" },
-    { "name": "AWS Certified Security – Specialty", "issuer": "Amazon Web Services", "year": "2023" }
-  ],
-  "interests": ["Threat Hunting", "Detection Engineering", "Memory Forensics", "YARA Rules", "KQL"],
+  "certifications": [],
+  "interests": ["CTFs", "Web Exploitation", "Cryptography", "Blue Teaming", "Threat Analysis"],
   "languages": [
-    { "name": "Python", "level": "Advanced" },
-    { "name": "Bash", "level": "Advanced" },
-    { "name": "Go", "level": "Intermediate" }
+    { "name": "Python", "level": "Intermediate" },
+    { "name": "Bash", "level": "Intermediate" },
+    { "name": "English", "level": "Professional" }
   ],
-  "internships": [
-    {
-      "company": "SecureOps Inc.",
-      "role": "Security Operations Intern",
-      "start": "Jun 2019",
-      "end": "Aug 2019",
-      "summary": "Developed Sigma rules to detect suspicious process trees; reduced false positives by 23%."
-    },
-    {
-      "company": "CloudGuard",
-      "role": "Cloud Security Intern",
-      "start": "Jun 2020",
-      "end": "Dec 2020",
-      "summary": "Automated IAM misconfiguration checks across multi-account AWS org using Lambda."
-    }
-  ]
+  "internships": []
 }
