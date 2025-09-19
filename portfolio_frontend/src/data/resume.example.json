@@ -1,54 +1,159 @@
 {
   "basic": {
     "name": "Sarfraj Ahamed S",
-    "role": "Cyber Security Enthusiast",
-    "summary": "Aspiring security professional exploring CTFs, vulnerability analysis, and blue-team practices. Passionate about continuous learning and hands-on problem solving.",
-    "location": "Tamil Nadu, India",
-    "email": "sarfraj@kavia.ai",
+    "role": "B.Tech AI & Data Science Student • Cybersecurity",
+    "summary": "To leverage my expertise in cybersecurity, AI, and data science to develop intelligent security solutions. Seeking a role where I can apply network security, ethical hacking, threat analysis, AI-driven threat detection, and automation to safeguard organizations while adapting to evolving threats.",
+    "location": "Tirunelveli, Tamil Nadu, India",
+    "email": "sarfrajahamed237@gmail.com",
     "links": [
-      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/sarfraj-s-ahamed/" },
-      { "label": "Email", "url": "mailto:sarfraj@kavia.ai" }
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/sarfraj-s-ahamed" },
+      { "label": "Phone", "url": "tel:+919092518033" },
+      { "label": "Email", "url": "mailto:sarfrajahamed237@gmail.com" }
     ]
   },
   "education": [
     {
       "school": "National Engineering College",
-      "degree": "B.Tech Artificial Intelligence and Data Science",
-      "focus": "AI & Data Science with cybersecurity interests",
+      "degree": "B.Tech – Artificial Intelligence and Data Science",
+      "focus": "AI & Data Science with Cybersecurity focus",
       "start": "2023",
-      "end": "2027",
-      "notes": ["Currently studying (3rd year AI&DS)"]
+      "end": "Present",
+      "notes": ["Current CGPA: 8.02"]
+    },
+    {
+      "school": "Little Flower Public School (CBSE)",
+      "degree": "Higher Secondary (HSC)",
+      "focus": "Science",
+      "start": "",
+      "end": "",
+      "notes": ["Scored 73.2%"]
     }
   ],
   "participation": [
     {
-      "title": "CTF Participation",
-      "org": "SRM College",
-      "year": "Ongoing",
-      "details": "Participated in Capture The Flag events focusing on web exploitation and crypto."
+      "title": "Project Expo",
+      "org": "KPR Institute of Engineering and Technology, Coimbatore",
+      "year": "",
+      "details": "Participated in 2 project expos."
     },
     {
-      "title": "CTF Participation",
-      "org": "Amrita College",
-      "year": "Ongoing",
-      "details": "Hands-on exposure to reverse engineering and forensics challenges."
+      "title": "Project Expo",
+      "org": "Sri Sairam Engineering College",
+      "year": "",
+      "details": "Participated in project expo."
     },
     {
-      "title": "Profiles",
-      "org": "CTF Platforms",
-      "details": "Public challenge profiles",
-      "profiles": [
-        { "site": "picoCTF", "url": "" },
-        { "site": "TryHackMe", "url": "" }
-      ]
+      "title": "Hackathon",
+      "org": "NIT Trichy – Fine-tech-a-thon 2025",
+      "year": "2025",
+      "details": "Participated in FinTech-themed hackathon."
+    },
+    {
+      "title": "CyberHackathon",
+      "org": "Tamil Nadu Police (Thoothukudi)",
+      "year": "2025",
+      "details": "Participated in state-level CyberHackathon."
+    },
+    {
+      "title": "Hacktronix",
+      "org": "Sri Sairam Engineering College",
+      "year": "2025",
+      "details": "Participated in Hacktronix hackathon."
+    },
+    {
+      "title": "Paper Presentation",
+      "org": "Sri Ramakrishna Engineering College (SREC), Coimbatore",
+      "year": "",
+      "details": "Presented a paper session."
+    },
+    {
+      "title": "IEEE International Conference",
+      "org": "RMK Engineering College",
+      "year": "June 2025",
+      "details": "Conference participation and publication."
     }
   ],
-  "certifications": [],
-  "interests": ["CTFs", "Web Exploitation", "Cryptography", "Blue Teaming", "Threat Analysis"],
-  "languages": [
-    { "name": "Python", "level": "Intermediate" },
-    { "name": "Bash", "level": "Intermediate" },
-    { "name": "English", "level": "Professional" }
+  "certifications": [
+    { "name": "Cloud Computing (NPTEL)", "issuer": "NPTEL", "year": "Elite+Silver" },
+    { "name": "Internet of Things (NPTEL)", "issuer": "NPTEL", "year": "Elite+Silver" },
+    { "name": "Industrial IoT (IIOT) (NPTEL)", "issuer": "NPTEL", "year": "Elite+Silver" },
+    { "name": "Kali Linux", "issuer": "Coursera", "year": "" },
+    { "name": "Introduction to Cybersecurity Fundamentals", "issuer": "Coursera", "year": "" },
+    { "name": "Cybersecurity Analyst Virtual Experience", "issuer": "Tata Group (Forage)", "year": "" }
   ],
-  "internships": []
+  "interests": [
+    "Cybersecurity",
+    "CTFs",
+    "Network Security",
+    "Ethical Hacking",
+    "Threat Analysis",
+    "AI for Security",
+    "Automation"
+  ],
+  "languages": [
+    { "name": "Python", "level": "" },
+    { "name": "Java", "level": "" },
+    { "name": "C", "level": "" },
+    { "name": "Linux (Bash)", "level": "" },
+    { "name": "SQL", "level": "" },
+    { "name": "Computer Networks", "level": "" },
+    { "name": "Machine Learning", "level": "" },
+    { "name": "Tamil", "level": "Native" },
+    { "name": "Urdu", "level": "Fluent" },
+    { "name": "English", "level": "Professional" },
+    { "name": "Hindi", "level": "Conversational" }
+  ],
+  "internships": [
+    {
+      "company": "National Institute of Technology, Trichy (NIT Trichy)",
+      "role": "Research Intern – AI & Cybersecurity",
+      "start": "June 2025",
+      "end": "July 2025",
+      "summary": "Project: AI-Based Multi-Cyberattack Detection System for Chat and Email Platforms."
+    },
+    {
+      "company": "Thoothukudi Police",
+      "role": "CyberHackathon Intern",
+      "start": "May 2025",
+      "end": "July 2025",
+      "summary": "Project: AIthaya ChatBot."
+    }
+  ],
+  "publications": [
+    {
+      "title": "Methods & Filters for Object Detection in Reading Images",
+      "venue": "IEEE Conference, RMK Engineering College",
+      "date": "June 2025"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Phishing Detection using Machine Learning",
+      "area": "Cyber & AI"
+    },
+    {
+      "name": "Real-Time DDoS Detection System",
+      "area": "Cyber & AI"
+    },
+    {
+      "name": "AI-Powered Steganography Detection System",
+      "area": "Cyber & AI"
+    },
+    {
+      "name": "CopBot Chatbox (AI Law Chatbot)",
+      "area": "AI & ML"
+    },
+    {
+      "name": "AI Virtual Voice Assistant",
+      "area": "AI & ML"
+    },
+    {
+      "name": "Fire Bot – AI-Powered Fire Extinguishing Robot",
+      "area": "Robotics"
+    },
+    {
+      "name": "AI-Powered Eye Drowsiness Detection System",
+      "area": "Robotics"
+    }
+  ]
 }

@@ -17,6 +17,8 @@ import Certifications from './components/sections/Certifications';
 import Interests from './components/sections/Interests';
 import Languages from './components/sections/Languages';
 import Internships from './components/sections/Internships';
+import Publications from './components/sections/Publications';
+import Projects from './components/sections/Projects';
 
 import { loadResumeData } from './utils/resume';
 
@@ -59,6 +61,8 @@ function App() {
               <Interests items={resume.interests} />
               <Languages items={resume.languages} />
               <Internships items={resume.internships} />
+              <Projects items={resume.projects} />
+              <Publications items={resume.publications} />
             </div>
           </div>
         )}
