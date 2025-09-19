@@ -1,82 +1,75 @@
-# Lightweight React Template for KAVIA
+# Cybersecurity-Themed Portfolio (Ocean Professional)
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+A modern React portfolio with a cybersecurity aesthetic: animated green scanning lines, card-based sections, and dynamic rendering from a resume JSON file. Minimal dependencies: React + vanilla CSS.
 
-## Features
+## Highlights
+- Ocean Professional theme (blue/amber accents) via CSS variables
+- Animated CyberGrid background with subtle glow and nodes
+- Reusable visual primitives: CyberCard and CyberText classes
+- Dynamic sections: Education, Participation, Certifications, Interests, Languages, Internships
+- Persistent theme toggle (light/dark) using localStorage
+- Accessible markup and keyboard-friendly focus rings
+- Sample resume data included (src/data/resume.example.json)
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+## Quick Start
+- npm start
+- npm test
+- npm run build
 
-## Getting Started
+Open http://localhost:3000
 
-In the project directory, you can run:
+## Directory Structure
+- src/styles/
+  - theme.css            Ocean Professional tokens, gradients, utilities
+  - layout.css           Header/Footer layout styles
+  - components.css       CyberCard and CyberText styles
+  - cyber.css            Animated cyber background
+- src/components/
+  - CyberGrid.jsx        Animated background elements
+  - ThemeToggle.jsx      Persistent theme switch
+  - CyberCard.jsx        Reusable card surface
+  - layout/
+    - Header.jsx
+    - Footer.jsx
+    - Container.jsx
+  - sections/
+    - Education.jsx
+    - Participation.jsx
+    - Certifications.jsx
+    - Interests.jsx
+    - Languages.jsx
+    - Internships.jsx
+- src/hooks/
+  - useTheme.js
+- src/utils/
+  - icons.js             Inline SVG icon utilities
+  - resume.js            Load/validate/save resume JSON
+- src/data/
+  - resume.example.json  Sample resume that drives the UI
 
-### `npm start`
+## Supplying Your Resume
+- Option 1 (recommended): Store JSON in localStorage under key `resume-data`.
+- Option 2: Replace `src/data/resume.example.json` with your data (must match structure).
+- On load, the app attempts to load localStorage first, then falls back to example JSON.
 
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Schema keys:
+- basic: { name, role, summary, location, email, links[] }
+- education: [{ school, degree, focus, start, end, notes[] }]
+- participation: [{ title, org, year, details }]
+- certifications: [{ name, issuer, year }]
+- interests: [string]
+- languages: [string | { name, level }]
+- internships: [{ company, role, start, end, summary }]
 
-### `npm test`
+## Theming
+- Theme is persisted in localStorage (key: ocean-theme).
+- CSS variables in `theme.css` adapt for light/dark modes.
 
-Launches the test runner in interactive watch mode.
+## Accessibility
+- Landmarks: header, main (Container), footer, region roles for sections
+- Focus ring on interactive elements
+- Semantic lists and headings
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-## Customization
-
-### Colors
-
-The main brand colors are defined as CSS variables in `src/App.css`:
-
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
-```
-
-### Components
-
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
-
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
-
-## Learn More
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Notes
+- No external UI frameworks used.
+- Icons are inline SVGs defined in `src/utils/icons.js`.

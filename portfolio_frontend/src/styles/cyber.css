@@ -1,0 +1,55 @@
+/* Animated cyber background */
+.cyber-grid {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, var(--cyber-line) 1px, transparent 1px) 0 0/48px 48px,
+    linear-gradient(0deg, var(--cyber-line) 1px, transparent 1px) 0 0/48px 48px,
+    var(--gradient-accent);
+  mask-image: radial-gradient(1200px 600px at 50% 20%, rgba(0,0,0,0.9), rgba(0,0,0,0.6) 40%, transparent 75%);
+}
+
+.cyber-grid::before, .cyber-grid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,255,149,0.18), rgba(0,255,149,0.02), rgba(0,255,149,0.18));
+  mix-blend-mode: screen;
+  animation: scan 9s linear infinite;
+  opacity: 0.25;
+}
+
+.cyber-grid::after {
+  animation-duration: 14s;
+  animation-direction: reverse;
+  opacity: 0.18;
+}
+
+@keyframes scan {
+  0% { transform: translateX(-40%); }
+  100% { transform: translateX(40%); }
+}
+
+/* Floating cyber nodes */
+.cyber-nodes {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.cyber-node {
+  position: absolute;
+  width: 2px; height: 2px;
+  background: var(--cyber-green);
+  box-shadow: 0 0 8px var(--cyber-green), 0 0 16px var(--cyber-green-dim);
+  opacity: 0.8;
+  border-radius: 2px;
+  animation: node-blink 2.8s ease-in-out infinite;
+}
+.cyber-node:nth-child(odd) { animation-duration: 3.4s; opacity: 0.6; }
+@keyframes node-blink {
+  0%, 100% { opacity: 0.2; transform: scale(0.9); }
+  50% { opacity: 0.9; transform: scale(1.1); }
+}

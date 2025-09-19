@@ -1,0 +1,64 @@
+{
+  "basic": {
+    "name": "Alex Morgan",
+    "role": "Cyber Security Analyst",
+    "summary": "Security-focused professional specializing in incident response, detection engineering, and cloud security posture. Passionate about blue teaming and adversary emulation.",
+    "location": "San Francisco, CA",
+    "email": "alex.morgan@example.com",
+    "links": [
+      { "label": "Website", "url": "https://alexmorgan.dev" },
+      { "label": "GitHub", "url": "https://github.com/cyberalex" },
+      { "label": "LinkedIn", "url": "https://linkedin.com/in/cyberalex" }
+    ]
+  },
+  "education": [
+    {
+      "school": "Tech University",
+      "degree": "B.S. Computer Science",
+      "focus": "Information Security",
+      "start": "2016",
+      "end": "2020",
+      "notes": ["Cybersecurity Club President", "Dean's List x6"]
+    }
+  ],
+  "participation": [
+    {
+      "title": "Blue Team Village Volunteer",
+      "org": "DEF CON",
+      "year": "2023",
+      "details": "Monitored SIEM dashboards, handled triage, and assisted with live defense demos."
+    },
+    {
+      "title": "CTF Participant",
+      "org": "HackTheBox / picoCTF",
+      "year": "2022 - Present",
+      "details": "Active in cryptography, web exploitation, and forensics challenges."
+    }
+  ],
+  "certifications": [
+    { "name": "CompTIA Security+", "issuer": "CompTIA", "year": "2021" },
+    { "name": "AWS Certified Security – Specialty", "issuer": "Amazon Web Services", "year": "2023" }
+  ],
+  "interests": ["Threat Hunting", "Detection Engineering", "Memory Forensics", "YARA Rules", "KQL"],
+  "languages": [
+    { "name": "Python", "level": "Advanced" },
+    { "name": "Bash", "level": "Advanced" },
+    { "name": "Go", "level": "Intermediate" }
+  ],
+  "internships": [
+    {
+      "company": "SecureOps Inc.",
+      "role": "Security Operations Intern",
+      "start": "Jun 2019",
+      "end": "Aug 2019",
+      "summary": "Developed Sigma rules to detect suspicious process trees; reduced false positives by 23%."
+    },
+    {
+      "company": "CloudGuard",
+      "role": "Cloud Security Intern",
+      "start": "Jun 2020",
+      "end": "Dec 2020",
+      "summary": "Automated IAM misconfiguration checks across multi-account AWS org using Lambda."
+    }
+  ]
+}

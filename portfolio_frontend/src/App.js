@@ -1,47 +1,69 @@
-import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import './styles/theme.css';
+import './styles/layout.css';
+import './styles/components.css';
+import './styles/cyber.css';
+
+import CyberGrid from './components/CyberGrid';
+import Container from './components/layout/Container';
+import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
+import ThemeToggle from './components/ThemeToggle';
+
+import Education from './components/sections/Education';
+import Participation from './components/sections/Participation';
+import Certifications from './components/sections/Certifications';
+import Interests from './components/sections/Interests';
+import Languages from './components/sections/Languages';
+import Internships from './components/sections/Internships';
+
+import { loadResumeData } from './utils/resume';
 
 // PUBLIC_INTERFACE
 function App() {
-  const [theme, setTheme] = useState('light');
+  const [resume, setResume] = useState(null);
+  const [error, setError] = useState('');
 
-  // Effect to apply theme to document element
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-  }, [theme]);
-
-  // PUBLIC_INTERFACE
-  const toggleTheme = () => {
-    setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
-  };
+    let mounted = true;
+    (async () => {
+      try {
+        const data = await loadResumeData();
+        if (mounted) setResume(data);
+      } catch (e) {
+        setError(e.message || 'Failed to load resume');
+      }
+    })();
+    return () => { mounted = false; };
+  }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <button 
-          className="theme-toggle" 
-          onClick={toggleTheme}
-          aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-        >
-          {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
-        </button>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          Current theme: <strong>{theme}</strong>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" role="application">
+      <CyberGrid />
+      <Header basic={resume?.basic} themeButton={<ThemeToggle />} />
+      <Container>
+        {error && (
+          <div role="alert" className="pill" style={{ margin: '16px 0' }}>
+            Error loading resume: {error}
+          </div>
+        )}
+        {resume && (
+          <div className="grid two" style={{ marginTop: 16 }}>
+            <div className="grid" style={{ gap: 20 }}>
+              <Education items={resume.education} />
+              <Participation items={resume.participation} />
+              <Certifications items={resume.certifications} />
+            </div>
+            <div className="grid" style={{ gap: 20 }}>
+              <Interests items={resume.interests} />
+              <Languages items={resume.languages} />
+              <Internships items={resume.internships} />
+            </div>
+          </div>
+        )}
+      </Container>
+      <Footer />
     </div>
   );
 }
